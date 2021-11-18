@@ -1,0 +1,33 @@
+<main class="contact-app-container">
+  <div class="error-msg" *ngIf="error$ | async">{{ error$ | async }}</div>
+  <div class="loading">
+    <div *ngIf="isLoading$ | async" class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- <section class="contact-filter">
+    <div class="search-bar">
+      <input
+        [(ngModel)]="filterBy"
+        (input)="loadContacts()"
+        placeholder="Filter Contacts"
+        type="search"
+        name="search"
+        pattern=".*\S.*"
+        required
+      />
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </div>
+  </section> -->
+  <app-header (onSearch)="loadContacts($event)"></app-header>
+  <contact-list [contacts]="contacts$ | async"></contact-list>
+</main>

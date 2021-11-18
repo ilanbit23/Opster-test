@@ -1,0 +1,19 @@
+<div class="contact-card">
+  <div class="content">
+    <div class="image-container">
+      <img class="contact-img" [src]="contact?.profile_image" alt="" />
+      <img class="green-icon" [src]="contact?.icon" alt="" />
+    </div>
+
+    <div class="contact-details">
+      <h3>
+        {{ contact?.name }}<br />
+        <span> {{ contact?.job }} | {{ contact?.company_name }} </span>
+      </h3>
+    </div>
+  </div>
+  <div class="extra-details">
+    <h4>Mail: {{ contact?.email }}</h4>
+    <h4>Phone: {{ contact?.phone }}</h4>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<section class="contact-edit">
+    <h2>Contact {{contactEditState}}</h2>
+    <form (submit)="$event.preventDefault();saveContact()">
+        <input type="text" name="txt" [(ngModel)]="contact.name" placeholder="Contact name" />
+        <button>{{contactEditState}}</button>
+    </form>
+    <hr/>
+    <pre>{{contact | json}}</pre>
+</section>

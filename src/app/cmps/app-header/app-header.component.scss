@@ -1,0 +1,12 @@
+.header {
+  padding: 20px 40px 0;
+  display: flex;
+  align-items: center;
+  h3 {
+    margin: 0;
+    color: rgb(155, 152, 152);
+  }
+  .contact-filter {
+    width: calc(100% - 220px);
+  }
+}

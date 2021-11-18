@@ -1,0 +1,20 @@
+<div class="header">
+  <h3>Contact list</h3>
+
+  <section class="contact-filter">
+    <div class="search-bar">
+      <input
+        [(ngModel)]="filterBy"
+        (input)="doSearch()"
+        placeholder="Filter Contacts"
+        type="search"
+        name="search"
+        pattern=".*\S.*"
+        required
+      />
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </div>
+  </section>
+</div>
